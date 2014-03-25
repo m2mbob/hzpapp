@@ -1,0 +1,137 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="50dip"
+    tools:context=".LoginActivity" 
+    >
+
+    <TextView
+        android:id="@+id/te11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="40dip"
+        android:textSize="24px"
+        android:text="化妆品名称："
+        />
+    
+    <EditText
+        android:id="@+id/ed3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/te11"
+        android:layout_toRightOf="@+id/te11" />
+    
+    <TextView
+        android:id="@+id/te12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/te11"
+        android:paddingTop="30dip"
+        android:textSize="24px"
+        android:text="化妆品类别:"
+        />
+    
+    <Spinner
+        android:id="@+id/sp1"
+        android:layout_width="100dp"
+        android:layout_height="24px"
+        android:layout_below="@+id/ed3"
+        android:layout_toRightOf="@+id/te12"
+        android:layout_alignBottom="@+id/te12"/>
+    
+    <TextView
+        android:id="@+id/te13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/te12"
+        android:paddingTop="30dip"
+        android:textSize="24px"
+        android:text="化妆品数量:"
+        />
+    
+    <EditText
+        android:id="@+id/ed4"
+        android:layout_width="fill_parent"
+        android:layout_height="24px"
+        android:layout_below="@+id/sp1"
+        android:layout_alignBottom="@+id/te13"
+        android:layout_toRightOf="@+id/te13" />
+    
+    <TextView
+        android:id="@+id/te14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/te13"
+        android:paddingTop="30dip"
+        android:textSize="24px"
+        android:text="化妆品规格:"
+        />
+    
+    <EditText
+        android:id="@+id/ed5"
+        android:layout_width="fill_parent"
+        android:layout_height="24px"
+        android:layout_below="@+id/ed4"
+        android:layout_alignBottom="@+id/te14"
+        android:layout_toRightOf="@+id/te14" />
+    
+    <TextView
+        android:id="@+id/te15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/te14"
+        android:paddingTop="30dip"
+        android:textSize="24px"
+        android:text="送检时间:"
+        />
+    
+    <EditText
+        android:id="@+id/ed6"
+        android:layout_width="fill_parent"
+        android:layout_height="24px"
+        android:layout_below="@+id/ed5"
+        android:layout_alignBottom="@+id/te15"
+        android:layout_toRightOf="@+id/te15" />   
+    
+    <TextView
+        android:id="@+id/te16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/te15"
+        android:paddingTop="30dip"
+        android:textSize="24px"
+        android:text="要求完成时间:"
+        />
+    
+    <EditText
+        android:id="@+id/ed7"
+        android:layout_width="fill_parent"
+        android:layout_height="24px"
+        android:layout_below="@+id/ed6"
+        android:layout_alignBottom="@+id/te16"
+        android:layout_toRightOf="@+id/te16" />     
+     
+    <TextView
+        android:id="@+id/te17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/te16"
+        android:paddingTop="30dip"
+        android:textSize="24px"
+        android:text="检测标准:"/>
+  
+    <Spinner
+        android:id="@+id/sp2"
+        android:layout_width="100dp"
+        android:layout_height="24px"
+        android:layout_below="@+id/ed7"
+        android:layout_toRightOf="@+id/te17"
+        android:layout_alignBottom="@+id/te17"/>
+    
+    
+    
+</RelativeLayout>

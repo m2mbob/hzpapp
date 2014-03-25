@@ -1,0 +1,153 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="50dip"
+    android:paddingTop="30dip"
+    tools:context=".LoginActivity" >
+	
+    <Button
+        android:id="@+id/bu1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/zaixian" />
+    
+    <TextView
+        android:id="@+id/te1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bu1"
+        android:textSize="32px"
+        android:text="在线检测"
+        />
+    
+    <Button
+        android:id="@+id/bu2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/te1"
+        android:paddingTop="30dip"
+        android:background="@drawable/jigou" />
+    
+    <TextView
+        android:id="@+id/te2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bu2"
+        android:text="检测机构"
+        android:textSize="32px"
+        />
+    
+    <Button
+        android:id="@+id/bu3"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/te2"
+        android:paddingTop="30dip"
+        android:background="@drawable/biaozhun" />
+    
+    <TextView
+        android:id="@+id/te3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bu3"
+        android:textSize="32px"
+        android:text="检测标准"
+        />
+    
+    <Button
+        android:id="@+id/bu4"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/te3"
+        android:paddingLeft="100dip"
+        android:paddingTop="30dip"
+        android:background="@drawable/bangzhu" />
+    
+    <TextView
+        android:id="@+id/te4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bu4"
+        android:text="帮助中心"
+        android:textSize="32px"
+        />
+
+    <Button
+        android:id="@+id/bu5"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignBaseline="@+id/bu1"
+        android:layout_alignBottom="@+id/bu1"
+        android:layout_marginLeft="46dp"
+        android:layout_toRightOf="@+id/te1"
+        android:background="@drawable/huiyuan" />
+    
+    <TextView
+        android:id="@+id/te5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bu5"
+        android:layout_alignLeft="@+id/bu5"
+        android:textSize="32px"
+        android:text="会员中心"
+        />
+    
+    <Button
+        android:id="@+id/bu6"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/te5"
+        android:layout_alignLeft="@+id/bu5"
+        android:background="@drawable/shebei"
+        />
+    
+    <TextView
+        android:id="@+id/te6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bu6"
+        android:layout_alignLeft="@+id/bu6"
+        android:textSize="32px"
+        android:text="检测设备"
+        />
+    
+    <Button
+        android:id="@+id/bu7"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/te6"
+        android:layout_alignLeft="@+id/bu6"
+        android:background="@drawable/way"
+        />
+    
+    <TextView
+        android:id="@+id/te7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bu7"
+        android:layout_alignLeft="@+id/bu7"
+        android:textSize="32px"
+        android:text="检测方法"
+        />
+    
+    <Button
+        android:id="@+id/bu8"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/te7"
+        android:layout_alignLeft="@+id/bu7"
+        android:background="@drawable/us"
+        />
+    
+    <TextView
+        android:id="@+id/te8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bu8"
+        android:layout_alignLeft="@+id/bu8"
+        android:textSize="32px"
+        android:text="关于我们"
+        />
+   
+</RelativeLayout>

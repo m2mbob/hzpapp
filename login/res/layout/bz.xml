@@ -1,0 +1,34 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="50dip"
+    tools:context=".LoginActivity" >
+
+<Spinner
+    android:id="@+id/sp3"
+    android:layout_width="75dip"
+    android:layout_height="40dip" />
+
+<EditText
+    android:id="@+id/ed8"
+    android:layout_width="150dip"
+    android:layout_height="40dip"
+    android:layout_toRightOf="@+id/sp3"
+    android:layout_alignBottom="@+id/sp3"
+    />
+
+<Button
+    android:id="@+id/bu9"
+    android:layout_width="60dip"
+    android:layout_height="40dip"
+    android:layout_toRightOf="@+id/ed8"
+    android:layout_alignBottom="@+id/ed8" 
+    android:text="搜索"
+    />
+
+</RelativeLayout>
+

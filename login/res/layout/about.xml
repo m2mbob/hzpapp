@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <TextView
+        android:id="@+id/te21"
+        android:paddingTop="20dip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/te20"
+        android:text="   去那检化妆品移动检测平台是由杭州易检网络有限公司的一个创新项目，旨在打造化妆品供应商，检测机构，卖家多赢的局面"
+        android:textSize="32px"
+        />
+    
+    <TextView
+        android:id="@+id/te22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/te21"
+        android:text="    本平台提供网上样品送检、检测结果查询服务及在线预约检测服务"
+        android:textSize="32px"
+        />
+
+    <TextView
+        android:id="@+id/te20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:paddingTop="30dip"
+        android:text="关于我们"
+        android:textSize="40px" />
+
+	<ImageButton
+	    android:id="@+id/imb"
+	    android:layout_width="150dip"
+	    android:layout_height="150dip"
+	    android:layout_alignParentBottom="true"
+	    android:layout_alignParentRight="true"
+	    android:background="@drawable/lo" />
+
+</RelativeLayout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <TableRow>
+        <Button
+            android:id="@+id/bu13"
+            android:layout_width="107dip"
+            android:layout_height="50dip"
+            android:background="#4169E1"
+            android:text="常见问题"
+            android:textColor="#FFFFFF"
+            />
+        <Button
+            android:id="@+id/bu14"
+            android:layout_width="107dip"
+            android:layout_height="50dip"
+            android:background="#4169E1"
+            android:text="新手指南"
+            android:textColor="#FFFFFF"
+            />     
+        <Button
+            android:id="@+id/bu15"
+            android:layout_width="107dip"
+            android:layout_height="50dip"
+            android:background="#4169E1"
+            android:text="资料下载"
+            android:textColor="#FFFFFF"
+            />        
+    </TableRow>>
+
+    <TableRow>
+        <Button
+            android:id="@+id/bu16"
+            android:layout_width="107dip"
+            android:layout_height="50dip"
+            android:background="#4169E1"
+            android:text="视频教程"
+            android:textColor="#FFFFFF"
+            />
+        <Button
+            android:id="@+id/bu17"
+            android:layout_width="107dip"
+            android:layout_height="50dip"
+            android:background="#4169E1"
+            android:text="备案专题"
+            android:textColor="#FFFFFF"
+            />     
+        <Button
+            android:id="@+id/bu18"
+            android:layout_width="107dip"
+            android:layout_height="50dip"
+            android:background="#4169E1"
+            android:text="联系客服"
+            android:textColor="#FFFFFF"
+            />        
+    </TableRow>>
+    	<TextView
+    	    android:id="@+id/te18"
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:background="#FFFFFF"
+            android:textSize="32px"
+            android:gravity="center"
+            android:text="快速通道"
+    	    />       
+    	    
+    	<Button
+    	    android:id="@+id/bu19"
+    	    android:layout_width="match_parent"
+    	    android:layout_height="50dip"
+    	    android:background="#DEDEDE"
+    	    android:text="找回密码"
+    	    />
+   
+    	<Button
+    	    android:id="@+id/bu20"
+    	    android:layout_width="match_parent"
+    	    android:layout_height="50dip"
+    	    android:background="#DEDEDE"
+    	    android:text="意见建议"
+    	    />	    
+     	
+     	<Button
+    	    android:id="@+id/bu21"
+    	    android:layout_width="match_parent"
+    	    android:layout_height="50dip"
+    	    android:background="#DEDEDE"
+    	    android:text="电话被冒用"
+    	    />	   
+    	    
+        <Button
+    	    android:id="@+id/bu22"
+    	    android:layout_width="match_parent"
+    	    android:layout_height="50dip"
+    	    android:background="#DEDEDE"
+    	    android:text="举报投诉"
+    	    />	     	    	    
+    	
+        <ImageView
+            android:id="@+id/img1"
+            android:layout_width="match_parent"
+            android:layout_height="110dip"
+            android:background="@drawable/bz"
+            />
+    
+</TableLayout>

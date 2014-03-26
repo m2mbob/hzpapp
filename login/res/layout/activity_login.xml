@@ -40,7 +40,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/te9"
         android:paddingTop="20dip"
-        android:text="密码：" />
+        android:text="密码：" 
+        android:inputType="text"/>
 
     <EditText
         android:id="@+id/ed2"
@@ -48,10 +49,9 @@
         android:layout_height="wrap_content"
         android:layout_toRightOf="@+id/te10"
         android:layout_alignBottom="@+id/te10"
-        android:paddingTop="20dip" >
+        android:paddingTop="20dip" 
+        android:inputType="textPassword"/>
 
-        <requestFocus />
-    </EditText>
 
     <Button
         android:id="@+id/bu"

@@ -35,7 +35,8 @@ public final class R {
         public static final int zaixian=0x7f02000b;
     }
     public static final class id {
-        public static final int action_settings=0x7f080045;
+        public static final int Bu=0x7f080045;
+        public static final int action_settings=0x7f080046;
         public static final int bu=0x7f080009;
         public static final int bu1=0x7f080025;
         public static final int bu10=0x7f080011;

@@ -72,10 +72,9 @@ public class LoginActivity extends Activity {
 	        });
 	}
 	
-	public boolean check(String username,String password){
+	public boolean check(String username,String password){       
         try {
-        	System.out.println("onCheck");
-			if(username.equals("zsc")&&password.equals("123456"))
+			if(username.equals("zsc")&&password.equals("123"))
 			{
 				return true;
 			}
@@ -84,7 +83,8 @@ public class LoginActivity extends Activity {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-        return false;
+        
+   return false;
     }
 
 

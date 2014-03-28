@@ -2,6 +2,9 @@ package com.example.login;
 
 
 import java.io.IOException;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
@@ -15,6 +18,7 @@ import org.json.JSONObject;
 
 import com.example.login.LoginActivity;
 import com.example.login.UserInfo;
+import com.mysql.jdbc.Connection;
 
 import android.os.Build;
 import android.os.Bundle;
@@ -38,6 +42,8 @@ public class LoginActivity extends Activity {
 	private String username;
 	private String password;
 	private Button b;
+	private boolean flag=false;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -72,9 +78,49 @@ public class LoginActivity extends Activity {
 	        });
 	}
 	
-	public boolean check(String username,String password){       
-        try {
-			if(username.equals("zsc")&&password.equals("123"))
+	public boolean check(String username,String password){  
+    	try {
+        	Class.forName("com.mysql.jdbc.Driver");	
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		try {
+            String url ="jdbc:mysql://10.21.246.7?user=root&password=123456789&useUnicode=true&characterEncoding=UTF-8";//链接数据库语句
+            Connection conn= (Connection) DriverManager.getConnection(url); //链接数据库
+            Statement stmt=(Statement) conn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_UPDATABLE);
+            String sql="select * from user where name=username";//查询user表语句
+            ResultSet rs=stmt.executeQuery(sql);//执行查询
+            while(rs.next()){
+            		int pw=rs.getInt("password");
+            		if ((pw+"").equals(password))
+            		{
+            			flag=true;
+            			break;
+            		}
+            }
+            if (rs!=null)
+            {
+            rs.close();    
+            rs=null;
+            }
+            if (stmt!=null)
+            {
+            stmt.close();
+            }
+            if (conn!=null)
+            {
+            conn.close();
+            }
+            
+            return flag;
+            
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+      
+		return flag;
+		/*  try {
+			if(username.equals("user")&&password.equals("user"))
 			{
 				return true;
 			}
@@ -85,6 +131,8 @@ public class LoginActivity extends Activity {
 		}
         
    return false;
+   */
+		
     }
 
 

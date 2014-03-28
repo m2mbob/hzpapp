@@ -65,7 +65,7 @@ public class MainActivity extends Activity {
             public void onClick(View v){
             	Intent intent = new Intent();  
                 /* 指定intent要启动的类 */
-                intent.setClass(MainActivity.this, helpActivity.class);
+                intent.setClass(MainActivity.this, hyActivity.class);
                 /* 启动一个新的Activity */
                 MainActivity.this.startActivity(intent);
                 /* 关闭当前的Activity */
@@ -77,7 +77,7 @@ public class MainActivity extends Activity {
             public void onClick(View v){
             	Intent intent = new Intent();  
                 /* 指定intent要启动的类 */
-                intent.setClass(MainActivity.this, hyActivity.class);
+                intent.setClass(MainActivity.this, cxActivity.class);
                 /* 启动一个新的Activity */
                 MainActivity.this.startActivity(intent);
                 /* 关闭当前的Activity */

@@ -3,7 +3,7 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:paddingLeft="50dip"
-    android:paddingTop="30dip"
+    android:paddingTop="25dip"
     tools:context=".LoginActivity" >
 	
     <Button
@@ -18,7 +18,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/bu1"
         android:textSize="32px"
-        android:text="在线检测"
+        android:text="在线送检"
         />
     
     <Button
@@ -62,14 +62,14 @@
         android:layout_below="@+id/te3"
         android:paddingLeft="100dip"
         android:paddingTop="30dip"
-        android:background="@drawable/bangzhu" />
+        android:background="@drawable/huiyuan" />
     
     <TextView
         android:id="@+id/te4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/bu4"
-        android:text="帮助中心"
+        android:text="会员中心"
         android:textSize="32px"
         />
 
@@ -79,9 +79,9 @@
         android:layout_height="80dp"
         android:layout_alignBaseline="@+id/bu1"
         android:layout_alignBottom="@+id/bu1"
-        android:layout_marginLeft="46dp"
-        android:layout_toRightOf="@+id/te1"
-        android:background="@drawable/huiyuan" />
+		android:layout_alignParentRight="true"
+		android:layout_marginRight="50dip"
+        android:background="@drawable/chaxun" />
     
     <TextView
         android:id="@+id/te5"
@@ -90,7 +90,7 @@
         android:layout_below="@+id/bu5"
         android:layout_alignLeft="@+id/bu5"
         android:textSize="32px"
-        android:text="会员中心"
+        android:text="检测查询"
         />
     
     <Button

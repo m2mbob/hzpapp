@@ -27,7 +27,7 @@
 		    android:id="@+id/bu23"
 		    android:layout_width="100dip"
 		    android:layout_height="wrap_content"
-		    android:text="修改"
+		    android:text="查看"
 		    />		
     </TableRow>
     
@@ -40,13 +40,13 @@
             android:id="@+id/te20"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="以往检测记录"
+            android:text="客户个人信息"
             android:textSize="40px" />
         <Button
             android:id="@+id/bu24"
             android:layout_width="100dip"
             android:layout_height="wrap_content"
-            android:text="查看" 
+            android:text="修改" 
             />
     </TableRow>
 </TableLayout>

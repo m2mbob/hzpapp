@@ -25,5 +25,7 @@
            android:layout_height="wrap_content"
            android:text="查询"
            />
-   </TableRow> 
+       
+   </TableRow>>
+   
 </TableLayout>

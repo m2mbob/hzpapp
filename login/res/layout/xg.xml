@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <TextView
+		android:id="@+id/te29"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:paddingTop="50dip"
+		android:text="新密码:"
+        />
+    <EditText
+        android:id="@+id/ed13"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/te29"
+        android:paddingTop="50dip"
+        />
+    <EditText
+        android:id="@+id/ed14"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/te29"
+        android:paddingTop="50dip"
+        android:layout_toRightOf="@+id/te30"
+        />
+    
+    <Button
+        android:id="@+id/bu26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ed14"
+        android:text="提交" />
+
+    <TextView
+        android:id="@+id/te30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/te29"
+        android:paddingTop="50dip"
+        android:text="重复新密码:" />
+
+</RelativeLayout>

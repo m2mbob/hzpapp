@@ -2,10 +2,6 @@ package com.example.login;
 
 
 import java.io.IOException;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
-
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
 import org.apache.http.client.ClientProtocolException;
@@ -15,34 +11,25 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import com.example.login.LoginActivity;
-import com.example.login.UserInfo;
-import com.mysql.jdbc.Connection;
-
-import android.os.Build;
-import android.os.Bundle;
-import android.os.StrictMode;
 import android.annotation.SuppressLint;
-import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.ProgressDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.DialogInterface.OnClickListener;
+import android.os.Bundle;
+import android.os.StrictMode;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+@SuppressLint("NewApi")
 public class LoginActivity extends Activity {
 	private ProgressDialog dialog;
 	private TextView error;
 	private String username;
 	private String password;
 	private Button b;
-	private boolean flag=false;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -58,83 +45,77 @@ public class LoginActivity extends Activity {
 	             System.out.println(username);
 	             System.out.println(password);
 	             System.out.println("onClick");
-	        	if(check(username,password)){
-	        		System.out.println("true");
-	        		Intent intent = new Intent();
-	                intent.putExtra("username",username);    
-	                /* 指定intent要启动的类 */
-	                intent.setClass(LoginActivity.this, MainActivity.class);
-	                /* 启动一个新的Activity */
-	                LoginActivity.this.startActivity(intent);
-	                /* 关闭当前的Activity */
-	                LoginActivity.this.finish();
-	        	}
-	        	else {
-	        		dialog.dismiss();
-	        		error.setText("用户名或密码错误！");
-	        	}
+	             if(check(username,password)){
+	         		Intent intent = new Intent();
+	                 intent.putExtra("username",username);    
+	                 /* 指定intent要启动的类 */
+	                 intent.setClass(LoginActivity.this, MainActivity.class);
+	                 /* 启动一个新的Activity */
+	                 LoginActivity.this.startActivity(intent);
+	                 /* 关闭当前的Activity */
+	                 LoginActivity.this.finish();
+	         	}
+	         	else {
+	         		dialog.dismiss();
+	         		error.setText("用户名或密码错误！");
+	         	}
 
-	        }
-	        });
-	}
-	
-	public boolean check(String username,String password){  
-    	try {
-        	Class.forName("com.mysql.jdbc.Driver");	
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		try {
-            String url ="jdbc:mysql://10.21.246.7?user=root&password=123456789&useUnicode=true&characterEncoding=UTF-8";//链接数据库语句
-            Connection conn= (Connection) DriverManager.getConnection(url); //链接数据库
-            Statement stmt=(Statement) conn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_UPDATABLE);
-            String sql="select * from user where name=username";//查询user表语句
-            ResultSet rs=stmt.executeQuery(sql);//执行查询
-            while(rs.next()){
-            		int pw=rs.getInt("password");
-            		if ((pw+"").equals(password))
-            		{
-            			flag=true;
-            			break;
-            		}
-            }
-            if (rs!=null)
-            {
-            rs.close();    
-            rs=null;
-            }
-            if (stmt!=null)
-            {
-            stmt.close();
-            }
-            if (conn!=null)
-            {
-            conn.close();
-            }
-            
-            return flag;
-            
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-      
-		return flag;
-		/*  try {
-			if(username.equals("user")&&password.equals("user"))
-			{
-				return true;
-			}
-			else return false;
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-        
-   return false;
-   */
-		
-    }
-
+	         }
+	         });
+	     }
+	     
+	     @SuppressLint("NewApi")
+		public boolean check(String username,String password){
+	    	 System.out.println("check");
+	     	StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder()
+	 		.detectDiskReads()
+	 		.detectDiskWrites()
+	 		.detectNetwork() // 这里可以替换为detectAll() 就包括了磁盘读写和网络I/O
+	 		.penaltyLog() //打印logcat，当然也可以定位到dropbox，通过文件保存相应的log
+	 		.build());
+	 		StrictMode.setVmPolicy(new StrictMode.VmPolicy.Builder()
+	 		.detectLeakedSqlLiteObjects() //探测SQLite数据库操作
+	 		//.penaltyLog() //打印logcats
+	 		.penaltyDeath()
+	 		.build()); 
+	 		String strUrl = "http://10.21.246.190:8080/makeup/applogin.action?username="+username+"&password="+password; 
+	 		HttpGet httpRequest = new HttpGet(strUrl); 
+	 		System.out.println("GET");
+	         String strResult = ""; 
+	         try { 
+	             // HttpClient对象 
+	             HttpClient httpClient = new DefaultHttpClient(); 
+	             System.out.println("client");
+	             // 获得HttpResponse对象 
+	             HttpResponse httpResponse = httpClient.execute(httpRequest); 
+	             System.out.println("response");
+	             if (httpResponse.getStatusLine().getStatusCode() == HttpStatus.SC_OK) { 
+	                 // 取得返回的数据 
+	                 strResult = EntityUtils.toString(httpResponse.getEntity()); 
+	             } 
+	         } catch (ClientProtocolException e) { 
+	         	ProgressDialog.show(LoginActivity.this, "protocol error", ""); 
+	             e.printStackTrace(); 
+	         } catch (IOException e) { 
+	         	ProgressDialog.show(LoginActivity.this, "IO error", ""); 
+	             e.printStackTrace(); 
+	         } 
+	         
+	         try {
+	 			if(new JSONObject(strResult).getString("ans")=="true")
+	 			{
+	 				UserInfo userInfo = ((UserInfo)getApplicationContext());    
+	 		        userInfo.setUsername(username);
+	 				return true;
+	 			}
+	 			else return false;
+	 		} catch (JSONException e) {
+	 			// TODO Auto-generated catch block
+	 			e.printStackTrace();
+	 		}
+	         
+	    return false;
+	     }
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

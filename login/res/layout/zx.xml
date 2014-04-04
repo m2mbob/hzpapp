@@ -5,7 +5,7 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="50dip"
+    android:paddingTop="20dip"
     tools:context=".LoginActivity" 
     >
 
@@ -13,7 +13,7 @@
         android:id="@+id/te11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="40dip"
+        android:paddingTop="20dip"
         android:textSize="24px"
         android:text="化妆品名称："
         />
@@ -30,15 +30,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/te11"
-        android:paddingTop="30dip"
+        android:paddingTop="20dip"
         android:textSize="24px"
         android:text="化妆品类别:"
         />
     
-    <Spinner
-        android:id="@+id/sp1"
-        android:layout_width="100dp"
-        android:layout_height="24px"
+    <EditText
+        android:id="@+id/ed15"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/ed3"
         android:layout_toRightOf="@+id/te12"
         android:layout_alignBottom="@+id/te12"/>
@@ -48,7 +48,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/te12"
-        android:paddingTop="30dip"
+        android:paddingTop="20dip"
         android:textSize="24px"
         android:text="化妆品数量:"
         />
@@ -57,7 +57,7 @@
         android:id="@+id/ed4"
         android:layout_width="fill_parent"
         android:layout_height="24px"
-        android:layout_below="@+id/sp1"
+        android:layout_below="@+id/ed15"
         android:layout_alignBottom="@+id/te13"
         android:layout_toRightOf="@+id/te13" />
     
@@ -66,7 +66,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/te13"
-        android:paddingTop="30dip"
+        android:paddingTop="20dip"
         android:textSize="24px"
         android:text="化妆品规格:"
         />
@@ -84,7 +84,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/te14"
-        android:paddingTop="30dip"
+        android:paddingTop="20dip"
         android:textSize="24px"
         android:text="送检时间:"
         />
@@ -102,7 +102,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/te15"
-        android:paddingTop="30dip"
+        android:paddingTop="20dip"
         android:textSize="24px"
         android:text="要求完成时间:"
         />
@@ -120,24 +120,64 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/te16"
-        android:paddingTop="30dip"
+        android:paddingTop="20dip"
         android:textSize="24px"
         android:text="检测标准:"/>
   
-    <Spinner
-        android:id="@+id/sp2"
-        android:layout_width="100dp"
-        android:layout_height="24px"
+    <EditText
+        android:id="@+id/ed16"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/ed7"
         android:layout_toRightOf="@+id/te17"
         android:layout_alignBottom="@+id/te17"/>
+    
+    <TextView
+        android:id="@+id/te31"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/te17"
+        android:paddingTop="20dip"
+        android:textSize="24px"
+        android:text="寄送时间"
+        />
+    
+    <EditText
+        android:id="@+id/ed17"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ed16"
+        android:layout_toRightOf="@+id/te31"
+        android:layout_alignBottom="@+id/te31"
+        />
 
+    <TextView
+        android:id="@+id/te32"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/te31"
+        android:paddingTop="20dip"
+        android:textSize="24px"
+        android:text="联系方式"
+        />
+    
+    <EditText
+        android:id="@+id/ed18"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/te32"
+        android:layout_alignTop="@+id/te32"
+        android:layout_toRightOf="@+id/te32" 
+        />
+    
     <Button
         android:id="@+id/Bu"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/te17"
         android:layout_alignParentBottom="true"
-        android:text="提交" />
+        android:text="提交" 
+        />
     
 </RelativeLayout>
+
